@@ -5,11 +5,16 @@ import Header from '../components/Header'
 
 export default class Home extends React.Component {
     render() {
+        var titulo = "Cualquier cosa"
+        var textoFooter = "Hola yo soy el footer de tu página"
+        var saludar = () => {
+            alert("Hola!")
+        }
         return (
             <div className="homeContainer">
-                <Header />
-                <Content />
-                <Footer />
+                <Header tit={titulo} valor={5} />
+                <Content />                
+                <Footer texto={textoFooter} saludar={saludar} />
             </div>
         )
     }

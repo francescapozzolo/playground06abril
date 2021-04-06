@@ -1,9 +1,10 @@
 import React from 'react' 
 
-const Header = () => {
+const Header = ({tit, valor}) => {  
+
     return (
         <header>
-            <h1>Playground</h1>
+            <h1>{tit} tiene el valor {valor}</h1>
         </header>
     )
 }
