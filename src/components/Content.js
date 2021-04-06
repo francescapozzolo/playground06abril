@@ -1,7 +1,13 @@
-const Content = () => {
+import Amigo from "./Amigo"
+
+const Content = ({amigos}) => {
+    
     return (
         <div className="homeContent">
-            <h1>Yo soy el contenido</h1>
+            {amigos.map(amigo => {
+                const fotoAMostrar = require(`../assets/${amigo.foto}`)
+                return <Amigo key={amigo.id} amigo={amigo} fotoAMostrar={fotoAMostrar} />
+            })}
         </div>
     )
 }
